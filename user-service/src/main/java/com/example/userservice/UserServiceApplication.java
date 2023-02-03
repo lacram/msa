@@ -14,7 +14,6 @@ public class UserServiceApplication {
         SpringApplication.run(UserServiceApplication.class, args);
     }
 
-    // 메인 어플리케이션에서 빈으로 등록해줘야 사용가능
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
