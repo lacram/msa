@@ -1,0 +1,17 @@
+
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: 
+
+        git:
+          default-label: master
+#          uri: file://C:\Users\chemi\IdeaProjects\git-local-repo
+          uri: https://github.com/lacram/spring-cloud-config.git
+

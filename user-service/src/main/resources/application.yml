@@ -1,5 +1,5 @@
 server:
-  port: 6000
+  port: 0
 
 spring:
   application:
@@ -23,7 +23,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://localhost:8761/eureka
 
 greeting:
   message : Welcome!!!
@@ -32,6 +32,12 @@ logging:
   level:
     com.example.userservice: DEBUG
 
-token:
-  expiration_time: 86400000
-  secret: user_token
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans
+
+#token:
+#  expiration_time: 86400000
+#  secret: usertokenusertokenusertokenusertokenusertoken
