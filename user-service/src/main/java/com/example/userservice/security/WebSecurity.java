@@ -34,6 +34,10 @@ public class WebSecurity {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable();
 
+        http    .authorizeHttpRequests()
+                .antMatchers("/actuator/**")
+                .permitAll();
+
         http
                 .authorizeHttpRequests()
                 .antMatchers("/**")
