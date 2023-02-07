@@ -1,0 +1,6 @@
+token:
+  expiration_time: 86400000
+  secret: usertokenusertokenusertokenusertokenusertokenUserService
+
+gateway:
+  ip: 192.168.0.8

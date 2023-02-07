@@ -16,6 +16,8 @@ spring:
     port: 5672
     username: guest
     password: guest
+  config:
+    import: classpath:/bootstrap.yml
   cloud:
     gateway:
       default-filters:
@@ -24,6 +26,7 @@ spring:
             baseMessage: Spring Cloud Gateway Global Filter
             preLogger: true
             postLogger: true
+
 
       routes:
         - id: order-service
@@ -85,14 +88,12 @@ spring:
 #                preLogger: true
 #                postLogger: true
 
-<<<<<<< HEAD
 token:
   expiration_time: 86400000
-  secret: usertokenaaaausertokenaaaausertokenaaaausertokenaaaa
-=======
+  secret: usertokenusertokenusertokenusertokenusertoken
+
 management:
   endpoints:
     web:
       exposure:
         include: refresh, beans, health, httptrace, busrefresh
->>>>>>> 6da6c9eb8fb6aaa7a74aaf215ff28157127cba23

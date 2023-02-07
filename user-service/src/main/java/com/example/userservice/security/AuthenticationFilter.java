@@ -64,6 +64,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
         String username = ((User) authResult.getPrincipal()).getUsername();
         UserDto userDetails = userService.getUserDetailsByEmail(username);
 
+        System.out.println("secret : " + env.getProperty("token.secret"));
         Key key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(env.getProperty("token.secret")));
 
         String token = Jwts.builder()

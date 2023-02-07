@@ -15,7 +15,7 @@ spring:
     config:
       server:
         native:
-          search-locations: file:///${user.home}/IdeaProjects/native-file-repo
+          search-locations: file:///${user.home}/IdeaProjects/msa/native-file-repo
 
         git:
           default-label: master
