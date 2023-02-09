@@ -1,6 +1,6 @@
-
 server:
   port: 8888
+
 spring:
   application:
     name: config-service
@@ -21,6 +21,8 @@ spring:
           default-label: master
 #          uri: file://C:\Users\chemi\IdeaProjects\git-local-repo
           uri: https://github.com/lacram/spring-cloud-config.git
+  config:
+    import: classpath:/bootstrap.yml
 
 management:
   endpoints:
