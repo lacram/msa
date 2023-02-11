@@ -2,8 +2,8 @@ server:
   port: 6000
 
 spring:
-#  application:
-#    name: user-service
+  application:
+    name: user-service
   rabbitmq:
     host: 127.0.0.1
     port: 5672
