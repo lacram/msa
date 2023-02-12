@@ -1,0 +1,22 @@
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      { "type": "int32", "optional": true, "field": "user_id" },
+      { "type": "string", "optional": true, "field": "product_id" },
+      { "type": "int32", "optional": true, "field": "qty" },
+      { "type": "int32", "optional": true, "field": "unit_price" },
+      { "type": "int32", "optional": true, "field": "total_price" }
+    ],
+    "optional": false,
+    "name": "orders"
+  },
+  "payload": {
+    "user_id": 1,
+    "product_id": "CATALOG-002",
+    "qty": 10,
+    "unit_price": 1500,
+    "total_price": 15000
+  }
+}
+{"schema":{"type":"struct","fields":[{"type":"int32","optional":false,"field":"id"},{"type":"string","optional":true,"field":"user_id"},{"type":"string","optional":true,"field":"pwd"},{"type":"string","optional":true,"field":"name"},{"type":"int64","optional":true,"name":"org.apache.kafka.connect.data.Timestamp","version":1,"field":"created_at"}],"optional":false,"name":"users"},"payload":{"id":4,"user_id":null,"pwd":"abcabc","name":"abcabc","created_at":1676237282000}}

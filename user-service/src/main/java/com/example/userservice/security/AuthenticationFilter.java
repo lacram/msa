@@ -68,13 +68,13 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
         Key key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(env.getProperty("token.secret")));
 
         String token = Jwts.builder()
-                .setSubject(userDetails.getUserId())
+                .setSubject(userDetails.getEmail())
                 .setExpiration(new Date(System.currentTimeMillis() + Long.parseLong(env.getProperty("token.expiration_time"))))
                 .signWith(key)
                 .compact();
 
         response.addHeader("token", token);
-        response.addHeader("userId", userDetails.getUserId());
+        response.addHeader("userEmail", userDetails.getEmail());
 
     }
 }
